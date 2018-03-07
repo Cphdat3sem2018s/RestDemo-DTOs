@@ -21,6 +21,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.core.MediaType;
 
 /**
@@ -48,17 +49,25 @@ public class StudentResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String getStudents() {
-        ArrayList<String> messages = new ArrayList<>();
+        ArrayList<JSONMessage> messages = new ArrayList<>();
         for(StudentEntity se : StudentFacade.students.values()){
-            messages.add(MessageFacade.toJson(se));
+            messages.add(new StudentMessage(se));
         }
         return gson.toJson(messages);
+    }
+    
+    @Path("/{studentid}")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getStudent(@PathParam("studentid") Integer id) {
+        StudentEntity s = StudentFacade.students.get(id);
+        return MessageFacade.messagetoJson(new StudentMessage(s));
     }
     
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void addStudent(String message){
-        StudentEntity s = gson.fromJson(message, StudentEntity.class);
+        StudentEntity s = MessageFacade.fromJson(message, StudentMessage.class);
         int nextId = 1 + StudentFacade.students.keySet().stream().max(Comparator.naturalOrder()).get();
         StudentFacade.students.put(nextId, s);
     }

@@ -20,7 +20,7 @@ public class CourseEntity {
 
     public void enroll(StudentEntity s) {
         participants.add(s);
-        s.courses.add(this);
+        s.getCourses().add(this);
     }
     
     public String getCourseName() {

@@ -9,6 +9,6 @@ package com.cos.studentapi.entities.jsonmessages;
  *
  * @author bladt
  */
-public interface JSONMessage {
-    
+public interface JSONMessage<T> {
+    public T fromMessage();
 }

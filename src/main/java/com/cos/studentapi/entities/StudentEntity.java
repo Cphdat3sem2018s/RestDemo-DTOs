@@ -18,7 +18,14 @@ public class StudentEntity {
     public int id;
     
     //10.50.138.129:8080/StudentApi/api/students
-    public List<CourseEntity> courses = new ArrayList<>();
+    private List<CourseEntity> courses = new ArrayList<>();
+
+    public List<CourseEntity> getCourses() {
+        if (courses == null) {
+            courses = new ArrayList<>();
+        }
+        return courses;
+    }
 
     public String getName() {
         return name;
@@ -33,4 +40,6 @@ public class StudentEntity {
         this.studypoints = studypoints;
         this.id=id;
     }
+    
+    
 }
