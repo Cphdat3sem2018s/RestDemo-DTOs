@@ -30,7 +30,7 @@ public class MessageFacade {
     }
   
     public static <T2, T extends JSONMessage<T2>> T2 fromJson(String json, Class<T> DTOClass){
-        return jsonToMessage(json, DTOClass).fromMessage();
+        return jsonToMessage(json, DTOClass).toInternal();
     }
     
 /**

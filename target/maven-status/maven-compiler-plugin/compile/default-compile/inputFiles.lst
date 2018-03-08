@@ -1,7 +1,8 @@
 /home/bladt/NetBeansProjects/StudentApi/src/main/java/com/cos/studentapi/entities/CourseEntity.java
-/home/bladt/NetBeansProjects/StudentApi/src/main/java/com/cos/studentapi/StudentResource.java
 /home/bladt/NetBeansProjects/StudentApi/src/main/java/com/cos/studentapi/entities/jsonmessages/JSONMessage.java
+/home/bladt/NetBeansProjects/StudentApi/src/main/java/com/cos/studentapi/StudentResource.java
 /home/bladt/NetBeansProjects/StudentApi/src/main/java/com/cos/studentapi/entities/StudentFacade.java
+/home/bladt/NetBeansProjects/StudentApi/src/main/java/com/cos/studentapi/entities/CourseFacade.java
 /home/bladt/NetBeansProjects/StudentApi/src/main/java/com/cos/studentapi/ApplicationConfig.java
 /home/bladt/NetBeansProjects/StudentApi/src/main/java/com/cos/studentapi/entities/jsonmessages/MessageFacade.java
 /home/bladt/NetBeansProjects/StudentApi/src/main/java/com/cos/studentapi/entities/jsonmessages/StudentMessage.java

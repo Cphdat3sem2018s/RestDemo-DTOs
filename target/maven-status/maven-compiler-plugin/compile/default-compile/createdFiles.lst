@@ -1,6 +1,9 @@
 com/cos/studentapi/entities/jsonmessages/JSONMessage.class
+com/cos/studentapi/entities/jsonmessages/StudentMessage.class
 com/cos/studentapi/entities/jsonmessages/MessageFacade.class
 com/cos/studentapi/StudentResource.class
+com/cos/studentapi/entities/CourseEntity.class
 com/cos/studentapi/entities/StudentFacade.class
 com/cos/studentapi/entities/StudentEntity.class
+com/cos/studentapi/entities/CourseFacade.class
 com/cos/studentapi/ApplicationConfig.class

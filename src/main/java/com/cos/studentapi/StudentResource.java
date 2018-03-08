@@ -55,7 +55,7 @@ public class StudentResource {
         }
         return gson.toJson(messages);
     }
-    
+
     @Path("/{studentid}")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -63,7 +63,7 @@ public class StudentResource {
         StudentEntity s = StudentFacade.students.get(id);
         return MessageFacade.messagetoJson(new StudentMessage(s));
     }
-    
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void addStudent(String message){

@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cos.studentapi.entities.jsonmessages;
+package com.cos.studentapi.entities;
 
 /**
  *
  * @author bladt
  */
-public interface JSONMessage<T> {
-    public T toInternal();
+public class CourseFacade {
+    
 }

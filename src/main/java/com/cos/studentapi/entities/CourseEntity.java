@@ -15,6 +15,7 @@ import java.util.List;
 public class CourseEntity {
     private String courseName;
     private int roomNumber;
+    public int id;
     
     private List<StudentEntity> participants = new ArrayList<>();
 
@@ -31,8 +32,9 @@ public class CourseEntity {
         return roomNumber;
     }
 
-    public CourseEntity(String courseName, int roomNumber) {
+    public CourseEntity(String courseName, int roomNumber, int id) {
         this.courseName = courseName;
         this.roomNumber = roomNumber;
+        this.id=id;
     }
 }

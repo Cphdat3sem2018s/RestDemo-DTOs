@@ -17,7 +17,7 @@ public class StudentEntity {
     private long studypoints;
     public int id;
     
-    //10.50.138.129:8080/StudentApi/api/students
+    
     private List<CourseEntity> courses = new ArrayList<>();
 
     public List<CourseEntity> getCourses() {
@@ -35,10 +35,17 @@ public class StudentEntity {
         return studypoints;
     }
 
-    public StudentEntity(String name, long studypoints, int id) {
+    public StudentEntity(String name, long studypoints, int id, List<CourseEntity> courses) {
         this.name = name;
         this.studypoints = studypoints;
         this.id=id;
+        this.courses = courses;
+    }
+
+    public StudentEntity(String name, long studypoints, int id) {
+        this.name = name;
+        this.studypoints = studypoints;
+        this.id = id;
     }
     
     

@@ -14,6 +14,7 @@ import javax.print.attribute.HashAttributeSet;
  */
 public class StudentFacade {
     public static HashMap<Integer, StudentEntity> students = new HashMap<>();
+    public static HashMap<Integer, CourseEntity> courses = new HashMap<>();
 
     static{
         StudentEntity s1 = new StudentEntity("GERY", 800, 1);
@@ -24,11 +25,22 @@ public class StudentFacade {
         students.put(2,s2);
         students.put(87,s3);
         
-        CourseEntity c1 = new CourseEntity("threads", 101);
-        CourseEntity c2 = new CourseEntity("rest", 362);
+        CourseEntity c1 = new CourseEntity("threads", 101, 1);
+        CourseEntity c2 = new CourseEntity("rest", 362,2);
+        
+        courses.put(1, c1);
+        courses.put(2, c2);
     
         c1.enroll(s1);
         c2.enroll(s1);
+    }
+    
+    public static CourseEntity findCourseById(int id){
+        return courses.get(id);
+    }
+    
+    public static void updateStudent(StudentEntity s){
+        students.put(s.id, s);
     }
 
 }
